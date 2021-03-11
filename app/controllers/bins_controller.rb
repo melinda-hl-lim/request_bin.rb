@@ -1,5 +1,5 @@
 class BinsController < ApplicationController
-  before_action :set_bin, only: %i[ show edit update destroy ]
+  before_action :set_bin, only: %i[show update destroy]
 
   # GET /bins or /bins.json
   def index
@@ -7,25 +7,20 @@ class BinsController < ApplicationController
   end
 
   # GET /bins/1 or /bins/1.json
-  def show
-  end
+  def show; end
 
   # GET /bins/new
   def new
     @bin = Bin.new
   end
 
-  # GET /bins/1/edit
-  def edit
-  end
-
   # POST /bins or /bins.json
   def create
-    @bin = Bin.new(bin_params)
+    @bin = Bin.new({ slug: Bin.generate_slug })
 
     respond_to do |format|
       if @bin.save
-        format.html { redirect_to @bin, notice: "Bin was successfully created." }
+        format.html { redirect_to @bin, notice: 'Bin was successfully created.' }
         format.json { render :show, status: :created, location: @bin }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +33,7 @@ class BinsController < ApplicationController
   def update
     respond_to do |format|
       if @bin.update(bin_params)
-        format.html { redirect_to @bin, notice: "Bin was successfully updated." }
+        format.html { redirect_to @bin, notice: 'Bin was successfully updated.' }
         format.json { render :show, status: :ok, location: @bin }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,19 +46,20 @@ class BinsController < ApplicationController
   def destroy
     @bin.destroy
     respond_to do |format|
-      format.html { redirect_to bins_url, notice: "Bin was successfully destroyed." }
+      format.html { redirect_to bins_url, notice: 'Bin was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_bin
-      @bin = Bin.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def bin_params
-      params.fetch(:bin, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_bin
+    @bin = Bin.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def bin_params
+    params.fetch(:bin)
+  end
 end

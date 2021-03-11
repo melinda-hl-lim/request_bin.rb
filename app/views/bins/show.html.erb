@@ -1,4 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_bin_path(@bin) %> |
+<h1><%= "Your bin URL is: https://localhost:3000/#{@bin.slug}" %></h1>
+<p>View all of your previous requests to the endpoint here.</p>
+
 <%= link_to 'Back', bins_path %>
