@@ -3,4 +3,8 @@
 <h1><%= "Your bin URL is: https://localhost:3000/#{@bin.slug}" %></h1>
 <p>View all of your previous requests to the endpoint here.</p>
 
+<% @bin.requests.each do | request | %>
+<%= render 'show_request', request: request %>
+<% end %>
+
 <%= link_to 'Back', root_path %>

@@ -1,0 +1,6 @@
+<h2><%= request.id %></h2>
+<ul>
+  <% JSON.parse(request.payload).each do |key, value| %>
+  <li><%= "#{key}: #{value}" %></li>
+  <% end %>
+</ul>
