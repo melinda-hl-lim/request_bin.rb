@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_request_path(@request) %> |
-<%= link_to 'Back', requests_path %>
+<h2>Headers</h2>
+<ul>
+  <% @payload.each do |key, value| %>
+  <li><%= "#{key}: #{value}" %></li>
+  <% end %>
+</ul>

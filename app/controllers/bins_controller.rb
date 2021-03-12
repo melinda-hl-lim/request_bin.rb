@@ -20,7 +20,7 @@ class BinsController < ApplicationController
 
     respond_to do |format|
       if @bin.save
-        format.html { redirect_to @bin, notice: 'Bin was successfully created.' }
+        format.html { redirect_to "/data/#{@bin.slug}", notice: 'Bin was successfully created.' }
         format.json { render :show, status: :created, location: @bin }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -33,7 +33,7 @@ class BinsController < ApplicationController
   def update
     respond_to do |format|
       if @bin.update(bin_params)
-        format.html { redirect_to @bin, notice: 'Bin was successfully updated.' }
+        format.html { redirect_to "/data/#{@bin.slug}", notice: 'Bin was successfully updated.' }
         format.json { render :show, status: :ok, location: @bin }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -55,11 +55,12 @@ class BinsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_bin
-    @bin = Bin.find(params[:id])
+    # byebug.pry
+    @bin = Bin.find_by(slug: bin_params)
   end
 
   # Only allow a list of trusted parameters through.
   def bin_params
-    params.fetch(:bin)
+    params.fetch(:bin_slug)
   end
 end
