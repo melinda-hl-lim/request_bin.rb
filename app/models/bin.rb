@@ -1,5 +1,5 @@
 class Bin < ApplicationRecord
-  has_many :requests, foreign_key: 'bin_id'
+  has_many :requests, foreign_key: 'bin_id', dependent: :delete_all
 
   SLUG_LENGTH = 10
 

@@ -40,10 +40,10 @@ class RequestsController < ApplicationController
     respond_to do |format|
       if @request.save
         # redirect to bins show page
-        format.html { redirect_to @request, notice: 'Request was successfully created.' }
+        format.html { redirect_to "/data/#{bin.slug}", notice: 'Request was successfully created.' }
         format.json { render :show, status: :created, location: @request }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.html { redirect_to '/', status: :unprocessable_entity }
         format.json { render json: @request.errors, status: :unprocessable_entity }
       end
     end
