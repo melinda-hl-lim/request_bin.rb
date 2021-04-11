@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= "Your bin URL is: https://localhost:3000/#{@bin.slug}" %></h1>
-<p>View all of your previous requests to the endpoint here.</p>
+<div>
+  <h2>"Your bin URL is:"</h2>
+  <h1><%= "https://localhost:3000/#{@bin.slug}" %></h1>
+  <p>View previous requests to the endpoint here.</p>
+</div>
 
 <% @bin.requests.each do | request | %>
 <%= render 'show_request', request: request %>

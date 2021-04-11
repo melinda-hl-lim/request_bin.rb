@@ -1,15 +1,29 @@
 class RequestsController < ApplicationController
   before_action :set_request, only: %i[show edit update destroy]
 
+  REJECT_HEADERS = %w[
+    SCRIPT_NAME
+    SERVER_SOFTWARE
+    GATEWAY_INTERFACE
+    REQUEST_METHOD
+    REQUEST_URI
+    HTTP_UPGRADE_INSECURE_REQUESTS
+    SERVER_NAME
+    SERVER_PORT
+    PATH_INFO
+    REMOTE_ADDR
+    ROUTES_70294134571560_SCRIPT_NAME
+    ORIGINAL_FULLPATH
+    ORIGINAL_SCRIPT_NAME
+  ].freeze
+
   # GET /requests or /requests.json
   def index
     @requests = Request.all
   end
 
   # GET /requests/1 or /requests/1.json
-  def show
-    @payload = JSON.parse(@request.payload)
-  end
+  def show; end
 
   # GET /requests/new
   def new
@@ -23,7 +37,7 @@ class RequestsController < ApplicationController
   def create
     bin = Bin.find_by(slug: request_params)
     payload = {
-      headers: request.headers.env.reject { |key| key.to_s.include?('.') },
+      headers: request.headers.env.reject { |key| key.to_s.include?('.') || REJECT_HEADERS.include?(key) },
       method: request.method,
       body: request.body,
       query_params: request.query_parameters,

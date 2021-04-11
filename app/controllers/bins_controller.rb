@@ -7,7 +7,9 @@ class BinsController < ApplicationController
   end
 
   # GET /bins/1 or /bins/1.json
-  def show; end
+  def show
+    
+  end
 
   # GET /bins/new
   def new
@@ -16,7 +18,7 @@ class BinsController < ApplicationController
 
   # POST /bins or /bins.json
   def create
-    @bin = Bin.new({ slug: Bin.generate_slug })
+    @bin = Bin.new
 
     respond_to do |format|
       if @bin.save

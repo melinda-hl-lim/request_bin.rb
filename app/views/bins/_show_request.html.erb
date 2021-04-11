@@ -1,6 +1,11 @@
-<h2><%= request.id %></h2>
-<ul>
-  <% JSON.parse(request.payload).each do |key, value| %>
-  <li><%= "#{key}: #{value}" %></li>
-  <% end %>
-</ul>
+<% payload = JSON.parse(request.payload) %>
+
+<div>
+  <ul>
+    <li><%= "Timestamp: #{payload["timestamp"]}" %></li>
+    <li><%= "Method: #{payload["method"].upcase}" %></li>
+    <li><%= "Headers: #{payload["headers"]}" %></li>
+    <li><%= "Query Parameters: #{payload["query_params"]}" %></li>
+    <li><%= "Body: #{payload["body"]}" %></li>
+  </ul>
+</div>

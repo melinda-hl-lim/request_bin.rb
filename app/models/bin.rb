@@ -1,9 +1,10 @@
 class Bin < ApplicationRecord
   has_many :requests, foreign_key: 'bin_id', dependent: :delete_all
+  before_create :generate_slug
 
-  SLUG_LENGTH = 10
+  private
 
-  def self.generate_slug
-    (0..SLUG_LENGTH).map { rand(36).to_s(36) }.join
+  def generate_slug
+    self.slug = SecureRandom.hex 4
   end
 end
