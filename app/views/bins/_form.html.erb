@@ -1,4 +1,7 @@
-<%= form_with(model: bin, local: true) do |form| %>
+<%= form_with(model: bin, 
+local: true, 
+class: "text-xl bg-white rounded-lg shadow-md my-4 px-4 py-2 hover:border-green-800 hover:border-opacity-100"
+) do |form| %>
 <% if bin.errors.any? %>
 <div id="error_explanation">
   <h2><%= pluralize(bin.errors.count, "error") %> prohibited this bin from being saved:</h2>
@@ -12,6 +15,11 @@
 <% end %>
 
 <div class="actions">
+  <%
+=begin%>
   <%= form.submit %>
+  <%
+=end%>
+  <input type="submit" name="commit" value="Create a Staq" data-disable-with="Create a Staq" class="bg-white">
 </div>
 <% end %>
