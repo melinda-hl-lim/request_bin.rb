@@ -1,13 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-  <h2>"Your bin URL is:"</h2>
-  <h1><%= "https://localhost:3000/#{@bin.slug}" %></h1>
-  <p>View previous requests to the endpoint here.</p>
+
+<div class="flex flex-col items-center justify-center">
+  <h2 class="text-2xl">Your staq URL is:</h2>
+  <div class="flex items-center justify-center bg-white rounded-lg shadow-md px-6 py-4 m-4">
+    <h1 class="text-3xl text-green-800">
+      <%= "https://localhost:3000/#{@bin.slug}" %>
+    </h1>
+  </div>
+  <p class="text-xl">View previous requests to the endpoint here.</p>
 </div>
 
 <% @bin.requests.each do | request | %>
 <%= render 'show_request', request: request %>
 <% end %>
-
-<%= link_to 'Back', root_path %>

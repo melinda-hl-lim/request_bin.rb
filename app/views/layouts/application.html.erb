@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RequestBinRb</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>RequestBinRb</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header class="sticky top-0 flex py-8 sm:px-4 lg:px-8 max-h-8 items-center bg-green-50 shadow">
+    <a href="<%= root_path %>" class="flex items-center">
+      <%= image_tag ("mochi-logo.png") %>
+      <h2 class="text-2xl hover:text-green-800 mx-2">ReQuest StaQ</h2>
+    </a>
+  </header>
+  <div class="min-h-screen flex-col items-center justify-center bg-green-50 pt-4 pb-12 px-12 sm:px-8 lg:px-12">
     <%= yield %>
-  </body>
+  </div>
+</body>
+
 </html>

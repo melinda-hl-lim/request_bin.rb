@@ -1,11 +1,34 @@
 <% payload = JSON.parse(request.payload) %>
 
-<div>
-  <ul>
-    <li><%= "Timestamp: #{payload["timestamp"]}" %></li>
-    <li><%= "Method: #{payload["method"].upcase}" %></li>
-    <li><%= "Headers: #{payload["headers"]}" %></li>
-    <li><%= "Query Parameters: #{payload["query_params"]}" %></li>
-    <li><%= "Body: #{payload["body"]}" %></li>
-  </ul>
+<div class="max-w-full bg-white rounded-lg shadow-md px-6 py-8 m-4">
+
+  <p class="text-base text-gray-600 pb-2">
+    <span class="font-semibold text-green-800">Timestamp: </span>
+    <%= payload["timestamp"] %>
+  </p>
+  <p class="text-base text-gray-600 pb-2">
+    <span class="font-semibold text-green-800">Method: </span>
+    <%= payload["method"].upcase %>
+  </p>
+
+
+  <p>
+    <span class="text-base font-semibold text-green-800">Headers: </span>
+  </p>
+  <div class="text-base text-gray-600 px-4 pb-2">
+    <% payload["headers"].each do |key, value| %>
+    <p class="break-words pb-1"><%= "#{key}: #{value}"%></p>
+    <% end %>
+  </div>
+
+  <p class="text-base text-gray-600 pb-2">
+    <span class="font-semibold text-green-800">Query Parameters: </span>
+    <%= payload["query_params"] %>
+  </p>
+
+  <p class="text-base text-gray-600">
+    <span class="font-semibold text-green-800">Body: </span>
+    <%= payload["body"] %>
+  </p>
+
 </div>
