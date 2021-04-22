@@ -6,7 +6,7 @@ on:
 env:
   ECR_REPO: fleet-ecr
   PROJECT: request-staq # request-bin
-  SERVER_PATH: ./ # server/
+  SERVER_PATH:  # server/
   SQL_FILE: ./db/setup.sql # server/db/migration.sql
   BUILDER: paketobuildpacks/builder:base # paketobuildpacks/builder:base
   DB_NAME: request_bin # request_bin
