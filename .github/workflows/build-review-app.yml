@@ -94,7 +94,7 @@ jobs:
       - name: install libpq-dev
         id: install-libpq-dev
         run: |
-          sudo apt-get install libpq-dev
+          sudo apt-get install postgresql postgresql-server-dev-all libpq-dev
 
         #TODO: New step: Pull the google builder & cache?
       - name: build, tag, and push image using Cloud Native Builder
