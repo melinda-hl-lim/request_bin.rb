@@ -1,0 +1,400 @@
+Melindas-MBP:request_bin.rb melinda$ pack build request-bin-rb --buildpack gcr.io/paketo-buildpacks/ruby --builder paketobuildpacks/builder:full
+full: Pulling from paketobuildpacks/builder
+d0c52a206d00: Pulling fs layer 
+1879a9e18f37: Pulling fs layer 
+1320020c14ba: Pulling fs layer 
+589a6b4e1acb: Pulling fs layer 
+8797aa640bd4: Pulling fs layer 
+14da236e5029: Pulling fs layer 
+888664fa9ca0: Pulling fs layer 
+357fefdf9bc9: Pulling fs layer 
+a697cc8a1d5c: Pulling fs layer 
+8151954a9698: Pulling fs layer 
+92cd0822736b: Pulling fs layer 
+f144b959f858: Pulling fs layer 
+a0816326ac7c: Pulling fs layer 
+9911db742a6c: Pulling fs layer 
+a71d88676efc: Pulling fs layer 
+34abafa93d48: Pulling fs layer 
+282602fc640a: Pulling fs layer 
+db863a500cf3: Pulling fs layer 
+56d7bcca752e: Pulling fs layer 
+09474fe777cd: Pulling fs layer 
+a1f3f619215b: Pulling fs layer 
+f038bb970d1c: Pulling fs layer 
+4ca22103a370: Pulling fs layer 
+b9bf72658c9f: Pulling fs layer 
+df3a0a0a56d8: Pulling fs layer 
+c207725752d4: Pulling fs layer 
+b1e7533bc019: Pulling fs layer 
+90329667a26e: Pulling fs layer 
+009acd529e4b: Pulling fs layer 
+b567de06cb59: Pulling fs layer 
+77dfed658907: Pulling fs layer 
+d1132d93a2b9: Pulling fs layer 
+78c1b79015a6: Pulling fs layer 
+8b78e691a530: Pulling fs layer 
+0a0cc1873dbf: Pulling fs layer 
+33d5ad1d909e: Pulling fs layer 
+fa74baf6cfb4: Pulling fs layer 
+c9c50a1f0605: Pulling fs layer 
+641fd92af6e1: Pulling fs layer 
+96b66c250c1d: Pulling fs layer 
+e8ddca67c9c1: Pulling fs layer 
+a088cd2b7e92: Pulling fs layer 
+0dbd1fa6ff8c: Pulling fs layer 
+858dfe120bf2: Pulling fs layer 
+d9312c9a3c52: Pulling fs layer 
+fa494bae78c2: Pulling fs layer 
+28628c1e526c: Pulling fs layer 
+1496aef483f6: Pulling fs layer 
+862834ce0af4: Pulling fs layer 
+130f6ca3220b: Pulling fs layer 
+98b7526ef57a: Pulling fs layer 
+2a8d533e0f64: Pulling fs layer 
+77c9938e5b75: Pull complete 
+116ef6a12a78: Pull complete 
+a79e5ded5319: Pull complete 
+fc222dead982: Pull complete 
+6171f4b495c3: Pull complete 
+4c998684cb61: Pull complete 
+b9f9948fdb8f: Pull complete 
+60d7b1898b3a: Pull complete 
+88d16ca07b74: Pull complete 
+be5310d8b8c2: Pull complete 
+9406565c4195: Pull complete 
+1976a30121c5: Pull complete 
+6b8dd1778060: Pull complete 
+69844fb96b46: Pull complete 
+1421d4b9c318: Pull complete 
+d1a08c221a9d: Pull complete 
+28b5dceccc55: Pull complete 
+4c14aa3f4c28: Pull complete 
+3d413b1b9b8a: Pull complete 
+4e64ce695e87: Pull complete 
+bcbee467462d: Pull complete 
+4a8f9381f1c4: Pull complete 
+3618926392ec: Pull complete 
+e2c2a5497ab8: Pull complete 
+1e203b1f6055: Pull complete 
+273978fd99f5: Pull complete 
+4f4fb700ef54: Pull complete 
+Digest: sha256:fd7dacdaafa5c6dc037597793d8d8e6264e1cfbe05d82d1fd631f5ed622f161a
+Status: Downloaded newer image for paketobuildpacks/builder:full
+full-cnb: Pulling from paketobuildpacks/run
+d0c52a206d00: Already exists 
+1879a9e18f37: Already exists 
+1320020c14ba: Already exists 
+e6d37211e30b: Pull complete 
+47d5fd489ac4: Pull complete 
+7a2a37938fb7: Pull complete 
+Digest: sha256:69dc523e09346b706e796a06270f5a2779e1581646d8b0170d3ecefd9b545723
+Status: Downloaded newer image for paketobuildpacks/run:full-cnb
+latest: Pulling from paketo-buildpacks/ruby
+e2c2a5497ab8: Pull complete 
+a1f3f619215b: Pull complete 
+8151954a9698: Pull complete 
+b567de06cb59: Pull complete 
+a0816326ac7c: Pull complete 
+0dbd1fa6ff8c: Pull complete 
+858dfe120bf2: Pull complete 
+e8ddca67c9c1: Pull complete 
+f144b959f858: Pull complete 
+bcbee467462d: Pull complete 
+fc222dead982: Pull complete 
+b9f9948fdb8f: Pull complete 
+009acd529e4b: Pull complete 
+98b7526ef57a: Pull complete 
+b1e7533bc019: Pull complete 
+4ca22103a370: Pull complete 
+282602fc640a: Pull complete 
+a088cd2b7e92: Pull complete 
+Digest: sha256:6f765726dd17b0ba39d77d95e972c0e3893811e4450277414bd7ef58156de385
+Status: Downloaded newer image for gcr.io/paketo-buildpacks/ruby:latest
+===> DETECTING
+9 of 12 buildpacks participating
+paketo-buildpacks/ca-certificates 2.1.0
+paketo-buildpacks/mri             0.1.6
+paketo-buildpacks/bundler         0.1.6
+paketo-buildpacks/bundle-install  0.2.0
+paketo-buildpacks/node-engine     0.3.1
+paketo-buildpacks/yarn            0.2.0
+paketo-buildpacks/yarn-install    0.3.0
+paketo-buildpacks/rails-assets    0.2.1
+paketo-buildpacks/puma            0.0.58
+===> ANALYZING
+Previous image with name "request-bin-rb" not found
+===> RESTORING
+===> BUILDING
+
+Paketo CA Certificates Buildpack 2.1.0
+  https://github.com/paketo-buildpacks/ca-certificates
+  Launch Helper: Contributing to layer
+    Creating /layers/paketo-buildpacks_ca-certificates/helper/exec.d/ca-certificates-helper
+Paketo MRI Buildpack 0.1.6
+  Resolving MRI version
+    Candidate version sources (in priority order):
+      Gemfile   -> "2.6.6"
+      <unknown> -> ""
+
+    Selected MRI version (using Gemfile): 2.6.6
+
+  Executing build process
+    Installing MRI 2.6.6
+      Completed in 3.82s
+
+  Configuring environment
+    GEM_PATH -> "/home/cnb/.gem/ruby/2.6.0:/layers/paketo-buildpacks_mri/mri/lib/ruby/gems/2.6.0"
+
+Paketo Bundler Buildpack 0.1.6
+  Resolving Bundler version
+    Candidate version sources (in priority order):
+      Gemfile.lock -> "2.*.*"
+      <unknown>    -> ""
+
+    Selected Bundler version (using Gemfile.lock): 2.2.16
+
+  Executing build process
+    Installing Bundler 2.2.16
+      Completed in 495ms
+
+  Configuring environment
+    GEM_PATH -> "$GEM_PATH:/layers/paketo-buildpacks_bundler/bundler"
+
+Paketo Bundle Install Buildpack 0.2.0
+  Executing build environment install process
+    Running 'bundle config --global clean true'
+    Running 'bundle config --global path /layers/paketo-buildpacks_bundle-install/build-gems'
+    Running 'bundle config --global cache_path --parseable'
+    Running 'bundle install'
+      Completed in 5m10.75s
+
+  Executing launch environment install process
+    Running 'bundle config --global clean true'
+    Running 'bundle config --global path /layers/paketo-buildpacks_bundle-install/launch-gems'
+    Running 'bundle config --global without development:test'
+    Running 'bundle config --global cache_path --parseable'
+    Running 'bundle install'
+      Completed in 4.78s
+
+  Configuring build environment
+    BUNDLE_USER_CONFIG -> "/layers/paketo-buildpacks_bundle-install/build-gems/config"
+
+  Configuring launch environment
+    BUNDLE_USER_CONFIG -> "/layers/paketo-buildpacks_bundle-install/launch-gems/config"
+
+Paketo Node Engine Buildpack 0.3.1
+  Resolving Node Engine version
+    Candidate version sources (in priority order):
+                -> ""
+      <unknown> -> ""
+
+    Selected Node Engine version (using ): 14.16.1
+
+  Executing build process
+    Installing Node Engine 14.16.1
+      Completed in 6.564s
+
+  Configuring build environment
+    NODE_ENV     -> "production"
+    NODE_HOME    -> "/layers/paketo-buildpacks_node-engine/node"
+    NODE_VERBOSE -> "false"
+
+  Configuring launch environment
+    NODE_ENV     -> "production"
+    NODE_HOME    -> "/layers/paketo-buildpacks_node-engine/node"
+    NODE_VERBOSE -> "false"
+
+    Writing profile.d/0_memory_available.sh
+      Calculates available memory based on container limits at launch time.
+      Made available in the MEMORY_AVAILABLE environment variable.
+
+Paketo Yarn Buildpack 0.2.0
+  Executing build process
+    Installing Yarn
+      Completed in 774ms
+
+Paketo Yarn Install Buildpack 0.3.0
+  Resolving installation process
+    Process inputs:
+      yarn.lock -> Found
+
+    Selected default build process: 'yarn install'
+
+  Executing build process
+    Running yarn install --ignore-engines --frozen-lockfile --modules-folder /layers/paketo-buildpacks_yarn-install/modules/node_modules
+      Completed in 1m7.387s
+
+  Configuring environment
+    PATH -> "$PATH:/layers/paketo-buildpacks_yarn-install/modules/node_modules/.bin"
+
+Paketo Rails Assets Buildpack 0.2.1
+  Executing build process
+    Running 'bundle exec rails assets:precompile assets:clean'
+failed to execute bundle exec output:
+yarn install v1.22.10
+warning package-lock.json found. Your project contains lock files generated by tools other than Yarn. It is advised not to mix package managers in order to avoid resolution inconsistencies caused by unsynchronized lock files. To clear this warning, remove package-lock.json.
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 1.36s.
+yarn install v1.22.10
+warning package-lock.json found. Your project contains lock files generated by tools other than Yarn. It is advised not to mix package managers in order to avoid resolution inconsistencies caused by unsynchronized lock files. To clear this warning, remove package-lock.json.
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 1.33s.
+I, [2021-05-24T19:20:21.078770 #1290]  INFO -- : Writing /workspace/public/assets/manifest-b4bf6e57a53c2bdb55b8998cc94cd00883793c1c37c5e5aea3ef6749b4f6d92b.js
+I, [2021-05-24T19:20:21.079498 #1290]  INFO -- : Writing /workspace/public/assets/manifest-b4bf6e57a53c2bdb55b8998cc94cd00883793c1c37c5e5aea3ef6749b4f6d92b.js.gz
+I, [2021-05-24T19:20:21.080368 #1290]  INFO -- : Writing /workspace/public/assets/mochi-logo-46b1e7101df7c4c45b6d41510ead0f5221570c5c4e756c05876a405738264b64.png
+I, [2021-05-24T19:20:21.082865 #1290]  INFO -- : Writing /workspace/public/assets/mochi-911f5e4f25ff09a486d0faf9f7c532bbae6ac9d70ab2a9b851ee0e037829a7b7.png
+I, [2021-05-24T19:20:21.085557 #1290]  INFO -- : Writing /workspace/public/assets/application-020fe4010de647b08206fd24b750297b9cd36624b71b8f1c25e8202bc52f24e6.css
+I, [2021-05-24T19:20:21.085799 #1290]  INFO -- : Writing /workspace/public/assets/application-020fe4010de647b08206fd24b750297b9cd36624b71b8f1c25e8202bc52f24e6.css.gz
+I, [2021-05-24T19:20:21.086333 #1290]  INFO -- : Writing /workspace/public/assets/bins-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css
+I, [2021-05-24T19:20:21.086661 #1290]  INFO -- : Writing /workspace/public/assets/bins-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css.gz
+I, [2021-05-24T19:20:21.086836 #1290]  INFO -- : Writing /workspace/public/assets/requests-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css
+I, [2021-05-24T19:20:21.087012 #1290]  INFO -- : Writing /workspace/public/assets/requests-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css.gz
+I, [2021-05-24T19:20:21.088062 #1290]  INFO -- : Writing /workspace/public/assets/scaffolds-d0926ce4a2a87383c1e3f3130e27f8ecef9481120dd9f966ad131f28098dbbd8.css
+I, [2021-05-24T19:20:21.095277 #1290]  INFO -- : Writing /workspace/public/assets/scaffolds-d0926ce4a2a87383c1e3f3130e27f8ecef9481120dd9f966ad131f28098dbbd8.css.gz
+I, [2021-05-24T19:20:21.096870 #1290]  INFO -- : Writing /workspace/public/assets/inter-font-a789ddd81e85c482dcbaec4865a1b97cdf87e8185ac9ab08da0f7d37f372cad7.css
+I, [2021-05-24T19:20:21.097762 #1290]  INFO -- : Writing /workspace/public/assets/inter-font-a789ddd81e85c482dcbaec4865a1b97cdf87e8185ac9ab08da0f7d37f372cad7.css.gz
+I, [2021-05-24T19:20:21.098535 #1290]  INFO -- : Writing /workspace/public/assets/Inter-italic.extra.var-cc59cf4b324781109d703309fc7d8814b6ba74dd2822a3c029715da8cb98ea57.woff2
+I, [2021-05-24T19:20:21.099438 #1290]  INFO -- : Writing /workspace/public/assets/Inter-italic.alternates.var-cc59cf4b324781109d703309fc7d8814b6ba74dd2822a3c029715da8cb98ea57.woff2
+I, [2021-05-24T19:20:21.102303 #1290]  INFO -- : Writing /workspace/public/assets/Inter-italic.symbols.var-59f27012284f5e97bbff303eb599ca98f29629a1c0fe7352bcc15b27d1dcd937.woff2
+I, [2021-05-24T19:20:21.103647 #1290]  INFO -- : Writing /workspace/public/assets/Inter-italic.cyrillic.var-a31159d5ce68b317b19edc7ee7f1f3ffdd5316ee899945b502406abda313afa2.woff2
+I, [2021-05-24T19:20:21.106448 #1290]  INFO -- : Writing /workspace/public/assets/Inter-italic.greek.var-77ec12f9397b88a29c16c05f2db87d9c0d0c2b157f1980271fed020f00b35321.woff2
+I, [2021-05-24T19:20:21.107657 #1290]  INFO -- : Writing /workspace/public/assets/Inter-italic.vietnamese.var-b5dc5b6490ba49e8193315ff62c8e90551102055440f084a6e982e5eab8e589a.woff2
+I, [2021-05-24T19:20:21.109167 #1290]  INFO -- : Writing /workspace/public/assets/Inter-italic.latin-ext.var-802705fb8496b82eda3f410c7e70a35c9407ba98b97cc5d9754db82750466fad.woff2
+I, [2021-05-24T19:20:21.110303 #1290]  INFO -- : Writing /workspace/public/assets/Inter-italic.latin.var-cbfc0334f8cfad4727431982cd32c32f7daf6e73f0ab6f759ec3dc757c1c6bf7.woff2
+I, [2021-05-24T19:20:21.111389 #1290]  INFO -- : Writing /workspace/public/assets/Inter-roman.extra.var-29781a209d7978155bf343eb1653779269965fa4a43d504b1fb361ab20e8487b.woff2
+I, [2021-05-24T19:20:21.112258 #1290]  INFO -- : Writing /workspace/public/assets/Inter-roman.alternates.var-29781a209d7978155bf343eb1653779269965fa4a43d504b1fb361ab20e8487b.woff2
+I, [2021-05-24T19:20:21.113057 #1290]  INFO -- : Writing /workspace/public/assets/Inter-roman.symbols.var-847d2a436a03ba1fbd4b750915db031a12a713befe0dcd79e8f39bf6a6e1a647.woff2
+I, [2021-05-24T19:20:21.113865 #1290]  INFO -- : Writing /workspace/public/assets/Inter-roman.cyrillic.var-8aa524d3da3b8fd4a03ff2d0d41ea50520113fb2e8ae57c15079dabea44b3529.woff2
+I, [2021-05-24T19:20:21.116841 #1290]  INFO -- : Writing /workspace/public/assets/Inter-roman.greek.var-1134a39060691474b0f57b2de5e09977a31a8c06df90960b982314f58a5b4c63.woff2
+I, [2021-05-24T19:20:21.117420 #1290]  INFO -- : Writing /workspace/public/assets/Inter-roman.vietnamese.var-a10e650090dc30250de0db440654c9bf29a843b233ee95a699b008bab0a6d498.woff2
+I, [2021-05-24T19:20:21.117879 #1290]  INFO -- : Writing /workspace/public/assets/Inter-roman.latin-ext.var-46bc23ba7e33ea447579cd95b95f34665d7560377065b72f3a77df8bca4b0e5c.woff2
+I, [2021-05-24T19:20:21.118400 #1290]  INFO -- : Writing /workspace/public/assets/Inter-roman.latin.var-4b87a3d384ea557b10afa9570b753eda868b12b5e51eea0977ffa6e641998f6a.woff2
+I, [2021-05-24T19:20:21.118692 #1290]  INFO -- : Writing /workspace/public/assets/tailwind-d11623fa43b89ebbd73fc802278c1b4dbe024deb897ae4d9843d7568f9380779.css
+I, [2021-05-24T19:20:21.118881 #1290]  INFO -- : Writing /workspace/public/assets/tailwind-d11623fa43b89ebbd73fc802278c1b4dbe024deb897ae4d9843d7568f9380779.css.gz
+Compiling...
+Compilation failed:
+Hash: bed1343b0b2cc5a7a05f
+Version: webpack 4.46.0
+Time: 8138ms
+Built at: 05/24/2021 7:20:32 PM
+ 2 assets
+Entrypoint application = js/application-8583a09d04ad02e0c0ee.js js/application-8583a09d04ad02e0c0ee.js.map
+[0] (webpack)/buildin/module.js 552 bytes {0} [built]
+[1] ./app/javascript/packs/application.js 774 bytes {0} [built]
+[5] ./app/javascript/channels/index.js 205 bytes {0} [built]
+[6] ./app/javascript/channels sync _channel\.js$ 160 bytes {0} [built]
+[7] ./app/javascript/stylesheets/application.scss 3.36 KiB {0} [built] [failed] [1 error]
+    + 3 hidden modules
+
+ERROR in ./app/javascript/stylesheets/application.scss
+Module build failed (from /layers/paketo-buildpacks_yarn-install/modules/node_modules/mini-css-extract-plugin/dist/loader.js):
+ModuleBuildError: Module build failed (from /layers/paketo-buildpacks_yarn-install/modules/node_modules/postcss-loader/src/index.js):
+Error: Cannot find module 'tailwindcss'
+Require stack:
+- /workspace/postcss.config.js
+- /layers/paketo-buildpacks_yarn-install/modules/node_modules/import-fresh/index.js
+- /layers/paketo-buildpacks_yarn-install/modules/node_modules/cosmiconfig/dist/loaders.js
+- /layers/paketo-buildpacks_yarn-install/modules/node_modules/cosmiconfig/dist/createExplorer.js
+- /layers/paketo-buildpacks_yarn-install/modules/node_modules/cosmiconfig/dist/index.js
+- /layers/paketo-buildpacks_yarn-install/modules/node_modules/cssnano/dist/index.js
+- /layers/paketo-buildpacks_yarn-install/modules/node_modules/optimize-css-assets-webpack-plugin/src/index.js
+- /layers/paketo-buildpacks_yarn-install/modules/node_modules/@rails/webpacker/package/environments/production.js
+- /layers/paketo-buildpacks_yarn-install/modules/node_modules/@rails/webpacker/package/index.js
+- /workspace/config/webpack/environment.js
+- /workspace/config/webpack/production.js
+- /layers/paketo-buildpacks_yarn-install/modules/node_modules/webpack-cli/bin/utils/convert-argv.js
+- /layers/paketo-buildpacks_yarn-install/modules/node_modules/webpack-cli/bin/cli.js
+- /layers/paketo-buildpacks_yarn-install/modules/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:725:27)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (/layers/paketo-buildpacks_yarn-install/modules/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/workspace/postcss.config.js:3:5)
+    at Module._compile (/layers/paketo-buildpacks_yarn-install/modules/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (/layers/paketo-buildpacks_yarn-install/modules/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at module.exports (/layers/paketo-buildpacks_yarn-install/modules/node_modules/import-fresh/index.js:28:9)
+    at loadJs (/layers/paketo-buildpacks_yarn-install/modules/node_modules/cosmiconfig/dist/loaders.js:9:18)
+    at Explorer.loadFileContent (/layers/paketo-buildpacks_yarn-install/modules/node_modules/cosmiconfig/dist/createExplorer.js:230:12)
+    at /layers/paketo-buildpacks_yarn-install/modules/node_modules/cosmiconfig/dist/createExplorer.js:252:21
+    at /layers/paketo-buildpacks_yarn-install/modules/node_modules/webpack/lib/NormalModule.js:316:20
+    at /layers/paketo-buildpacks_yarn-install/modules/node_modules/loader-runner/lib/LoaderRunner.js:367:11
+    at /layers/paketo-buildpacks_yarn-install/modules/node_modules/loader-runner/lib/LoaderRunner.js:233:18
+    at context.callback (/layers/paketo-buildpacks_yarn-install/modules/node_modules/loader-runner/lib/LoaderRunner.js:111:13)
+    at /layers/paketo-buildpacks_yarn-install/modules/node_modules/postcss-loader/src/index.js:208:9
+ @ ./app/javascript/packs/application.js 5:120-152
+Child mini-css-extract-plugin ../layers/paketo-buildpacks_yarn-install/modules/node_modules/css-loader/dist/cjs.js??ref--7-1!../layers/paketo-buildpacks_yarn-install/modules/node_modules/postcss-loader/src/index.js??ref--7-2!../layers/paketo-buildpacks_yarn-install/modules/node_modules/sass-loader/dist/cjs.js??ref--7-3!app/javascript/stylesheets/application.scss:
+    Entrypoint mini-css-extract-plugin = *
+    [0] /layers/paketo-buildpacks_yarn-install/modules/node_modules/css-loader/dist/cjs.js??ref--7-1!/layers/paketo-buildpacks_yarn-install/modules/node_modules/postcss-loader/src??ref--7-2!/layers/paketo-buildpacks_yarn-install/modules/node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss 2.68 KiB {0} [built] [failed] [1 error]
+    
+    ERROR in ./app/javascript/stylesheets/application.scss (/layers/paketo-buildpacks_yarn-install/modules/node_modules/css-loader/dist/cjs.js??ref--7-1!/layers/paketo-buildpacks_yarn-install/modules/node_modules/postcss-loader/src??ref--7-2!/layers/paketo-buildpacks_yarn-install/modules/node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss)
+    Module build failed (from /layers/paketo-buildpacks_yarn-install/modules/node_modules/postcss-loader/src/index.js):
+    Error: Cannot find module 'tailwindcss'
+    Require stack:
+    - /workspace/postcss.config.js
+    - /layers/paketo-buildpacks_yarn-install/modules/node_modules/import-fresh/index.js
+    - /layers/paketo-buildpacks_yarn-install/modules/node_modules/cosmiconfig/dist/loaders.js
+    - /layers/paketo-buildpacks_yarn-install/modules/node_modules/cosmiconfig/dist/createExplorer.js
+    - /layers/paketo-buildpacks_yarn-install/modules/node_modules/cosmiconfig/dist/index.js
+    - /layers/paketo-buildpacks_yarn-install/modules/node_modules/cssnano/dist/index.js
+    - /layers/paketo-buildpacks_yarn-install/modules/node_modules/optimize-css-assets-webpack-plugin/src/index.js
+    - /layers/paketo-buildpacks_yarn-install/modules/node_modules/@rails/webpacker/package/environments/production.js
+    - /layers/paketo-buildpacks_yarn-install/modules/node_modules/@rails/webpacker/package/index.js
+    - /workspace/config/webpack/environment.js
+    - /workspace/config/webpack/production.js
+    - /layers/paketo-buildpacks_yarn-install/modules/node_modules/webpack-cli/bin/utils/convert-argv.js
+    - /layers/paketo-buildpacks_yarn-install/modules/node_modules/webpack-cli/bin/cli.js
+    - /layers/paketo-buildpacks_yarn-install/modules/node_modules/webpack/bin/webpack.js
+        at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)
+        at Function.Module._load (internal/modules/cjs/loader.js:725:27)
+        at Module.require (internal/modules/cjs/loader.js:952:19)
+        at require (/layers/paketo-buildpacks_yarn-install/modules/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+        at Object.<anonymous> (/workspace/postcss.config.js:3:5)
+        at Module._compile (/layers/paketo-buildpacks_yarn-install/modules/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+        at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+        at Module.load (internal/modules/cjs/loader.js:928:32)
+        at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+        at Module.require (internal/modules/cjs/loader.js:952:19)
+        at require (/layers/paketo-buildpacks_yarn-install/modules/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+        at module.exports (/layers/paketo-buildpacks_yarn-install/modules/node_modules/import-fresh/index.js:28:9)
+        at loadJs (/layers/paketo-buildpacks_yarn-install/modules/node_modules/cosmiconfig/dist/loaders.js:9:18)
+        at Explorer.loadFileContent (/layers/paketo-buildpacks_yarn-install/modules/node_modules/cosmiconfig/dist/createExplorer.js:230:12)
+        at /layers/paketo-buildpacks_yarn-install/modules/node_modules/cosmiconfig/dist/createExplorer.js:252:21
+
+
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+        ["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+        ["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+        ["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+        ["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+        ["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+        ["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+
+error: exit status 1
+ERROR: failed to build: exit status 1
+ERROR: failed to build: executing lifecycle: failed with status code: 145
+Melindas-MBP:request_bin.rb melinda$ 
